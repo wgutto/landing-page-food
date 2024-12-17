@@ -1,9 +1,9 @@
 #menu {
+    min-height: calc(100vh - 90px);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
 }
 
 #dishes {
@@ -44,11 +44,12 @@
     background-color:#007526;
 }
 .dish-rate {
-    color: #f97e20;;
+    color: #f97e20;
 }
 .dish-price {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
 
 @media screen and (max-width: 1428px) { 
