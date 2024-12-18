@@ -4,7 +4,7 @@ $(document).ready(function() {
         $('#mobile_button').find('i').toggleClass('fa-x')
     })
 
-    const sections = $('.section')
+    const sections = $('section')
     const navItems = $('.nav-item')
 
     $(window).on('scroll', function () {
@@ -21,7 +21,7 @@ $(document).ready(function() {
 
         sections.each(function(i) {
             const section = $(this)
-            const sectionTop = section.offset().top - 96
+            const sectionTop = section.offset().top - 90
             const sectionBottom = sectionTop + section.outerHeight()
 
             if(scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
@@ -29,7 +29,31 @@ $(document).ready(function() {
                 return false
             } 
         })
-
+        navItems.removeClass('active')
         $(navItems[activeSectionIndex]).addClass('active')
+    })
+
+    ScrollReveal().reveal('#cta', {
+        origin: 'left', 
+        duration: 2000,
+        distance: '20%'
+    })
+
+    ScrollReveal().reveal('.dish', {
+        origin: 'left', 
+        duration: 2000,
+        distance: '20%'
+    })
+
+    ScrollReveal().reveal('#testimonials_chef', {
+        origin: 'left', 
+        duration: 1000,
+        distance: '20%'
+    })
+
+    ScrollReveal().reveal('.feedback', {
+        origin: 'right', 
+        duration: 2000,
+        distance: '20%'
     })
 })
